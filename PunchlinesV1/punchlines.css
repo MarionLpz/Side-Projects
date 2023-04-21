@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    background-color: black;
+    --text-color: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;
+    place-content: center;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    font-family: 'Staatliches', cursive;
+    font-size: clamp(1.5rem, 1rem + 18vw, 15rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.wrapper>div {
+    grid-area: 1/1/-1/-1;
+}
+
+.top {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+}
+
+
+.bottom {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    color: transparent;
+    background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+    background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translateX(-0.02em);
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid white;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Avenir Next LT W01 Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 23px;
+    position: relative;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 13px;
+}
+
+button:hover,
+button:active {
+    outline: 0;
+}
+
+button:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button:before {
+    background-color: #F2594B;
+    content: "";
+    height: calc(100% + 3px);
+    position: absolute;
+    right: -7px;
+    top: -9px;
+    transition: background-color 300ms ease-in;
+    width: 100%;
+    z-index: -1;
+}
+
+button:hover:before {
+    background-color: #F26E50;
+}
+
+@media (min-width: 768px) {
+    button {
+        padding: 16px 32px;
+    }
+}
+
+
+
+
+h1 {
+    font-family: 'Staatliches', cursive;
+    font-size: 50px;
+    color: white;
+
+
+}
+
+h5 {
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+    margin: 2px;
+    color: #F2594B;
+}
+
+body {
+    font-family: "Avenir Next LT W01 Bold", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    padding: 15px;
+    background-size: auto;
+    color: white;
+}
+
+#player {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    visibility: hidden;
+    font-size: 16px;
+    font-family: 'Staatliches', cursive;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
