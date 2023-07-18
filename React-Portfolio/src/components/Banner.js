@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Web Developper", "Web designer", "UI/UX designer"];
+  const toRotate = ["Web Developer", "Funny colleague", "Cat Lover"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
@@ -46,20 +48,61 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="align-items-center">
+        <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Welcome to my portfolio ! </span>
-            <h1>
-              {`Hi, i'm a webdecoded `}
-              <span className="wrap">{text}</span>
-            </h1>
-            <p>La programmation c'est trop cool !</p>
-            <button onClick={() => console.log("connect")}>
-              Let's connect ! <ArrowRightCircle size={25} />
-            </button>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__fadeIn" : ""
+                  }
+                >
+                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1>
+                    {`Hi! I'm Marion `}
+                    <br></br>
+                    <span
+                      className="txt-rotate"
+                      dataPeriod="1000"
+                      data-rotate='[ "Web Developer", "Funny colleague", "Cat Lover"]'
+                    >
+                      <span className="wrap">{text}</span>
+                    </span>
+                  </h1>
+                  <p>
+                    <b>A la recherche d'un contrat pro </b>
+                  </p>
+                  <p style={{ fontSize: "smaller" }}>
+                    📅 Quand ? Dès octobre 2023
+                  </p>
+                  <p style={{ fontSize: "smaller" }}>⏱️ Durée : 12 mois</p>
+                  <p style={{ fontSize: "smaller" }}>
+                    💃 Rythme ? 4 jours en entreprise (du lundi au jeudi) / 1
+                    jour à l'école
+                  </p>
+                  <p style={{ fontSize: "smaller" }}>
+                    🎓 Diplôme : Concepteur développeur d’application, RNCP
+                    niveau 6
+                  </p>
+                  <button onClick={() => console.log("connect")}>
+                    Let’s Connect <ArrowRightCircle size={25} />
+                  </button>
+                </div>
+              )}
+            </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <img src={headerImg} alt="Header image" />
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__zoomIn" : ""
+                  }
+                >
+                  <img src={headerImg} alt="Header Img" />
+                </div>
+              )}
+            </TrackVisibility>
           </Col>
         </Row>
       </Container>
