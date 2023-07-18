@@ -1,6 +1,9 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Nav, Tab, Col, Container, Row } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import projImg1 from "../assets/img/project-img1.png";
+import projImg2 from "../assets/img/project-img2.png";
+import projImg3 from "../assets/img/project-img3.png";
 
 export const Projects = () => {
   const projects = [
@@ -62,11 +65,11 @@ export const Projects = () => {
                 <Tab.Pane eventKey="first">
                   <Row>
                     {projects.map((project, index) => {
-                      return <ProjectCard key={index} {...projects} />;
+                      return <ProjectCard key={index} {...project} />;
                     })}
                   </Row>
                 </Tab.Pane>
-                <Tab.Pane eventKey="section">
+                <Tab.Pane eventKey="second">
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Cumque quam, quod neque provident velit, rem explicabo
