@@ -34,8 +34,9 @@ export const Skills = () => {
             <div className="skill-bx">
               <h2>Skills</h2>
               <p>
-                J'apprends plein de nouveaux trucs à Ada Tech School.<br></br>{" "}
-                Et peut-etre que ma tête va exploser.
+                J'apprends plein de nouvelles choses à Ada Tech School.<br></br>{" "}
+                Et peut-etre que ma tête va exploser. Ou alors, tout va bien se
+                passer.
               </p>
               <Carousel
                 responsive={responsive}
@@ -43,19 +44,19 @@ export const Skills = () => {
                 className="skill-slider"
               >
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter1} alt="skill level" />
                   <h5>Web Developpement</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="Image" />
+                  <img src={meter2} alt="skill level" />
                   <h5>Brand identity</h5>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt="Image" />
+                  <img src={meter3} alt="skill level" />
                   <h5>Aimer les chatons</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter1} alt="skill level" />
                   <h5>Faire du paddle</h5>
                 </div>
               </Carousel>
@@ -63,7 +64,7 @@ export const Skills = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-left" src={colorSharp} />
+      <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   );
 };
