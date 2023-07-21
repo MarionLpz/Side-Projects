@@ -8,7 +8,7 @@ import TrackVisibility from "react-on-screen";
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Web Developer", "Funny colleague", "Cat Lover"];
+  const toRotate = ["Web Developer", "Nice colleague", "Cat Lover"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
@@ -57,7 +57,7 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className="tagline">Welcome to my Portfolio</span>
+                  <span className="tagline">Welcome to my portfolio</span>
                   <h1>
                     {`Hi! I'm Marion `}
                     <br></br>
@@ -70,7 +70,7 @@ export const Banner = () => {
                     </span>
                   </h1>
                   <p>
-                    <b>A la recherche d'un contrat pro </b>
+                    <b>A la recherche d'une alternance ! 🤝 </b>
                   </p>
                   <p style={{ fontSize: "smaller" }}>
                     📅 Quand ? Dès octobre 2023
